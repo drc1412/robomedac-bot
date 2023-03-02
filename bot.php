@@ -1,4 +1,10 @@
 <?php
+
+    function sendMessage($chatId, $response) {
+        $url = $GLOBALS['web'] . '/sendMessage?chat_id='.$chatId.'&parse_mode=HTML&text='. urlencode($response);
+        file_get_contents($url);
+    }
+
     $token = '5852228268:AAF7dwIDA2zK-bSVrCDWgobJ4pJadMCCr98';
     $web = 'htpps://api.telegram.org/bot' . $token;
 
@@ -23,8 +29,4 @@
             break;
     }
     
-    function sendMessage($chatId, $response) {
-        $url = $GLOBALS['web'] . '/sendMessage?chat_id='.$chatId.'&parse_mode=HTML&text='. urlencode($response);
-        file_get_contents($url);
-    }
 ?>
