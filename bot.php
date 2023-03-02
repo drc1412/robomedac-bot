@@ -20,7 +20,7 @@
             sendMessage($chatId, $response);
             break;
         case '/info':
-            $response = 'Hola, soy @robomedac_bot'
+            $response = 'Hola, soy @robomedac_bot';
             sendMessage($chatId, $response);
             break;
         default:
